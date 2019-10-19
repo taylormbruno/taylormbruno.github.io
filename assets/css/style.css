@@ -1,3 +1,4 @@
+/* Background image */
 body {
     background: url("../images/greek-vase.png");
     background-repeat: repeat;
@@ -5,6 +6,7 @@ body {
     height: 100%;
 }
 
+/* Header Bar */
 .header {
     background: #ffffff;   
     border-bottom: 2px solid #cccccc;
@@ -16,23 +18,20 @@ body {
     z-index: 3;
 }
 
-.fullWrap {
-    margin: 0 auto;
-    width:960px;
-    height:40px;
-}
-
 .sidebar {
-    text-align: center;
+    text-align: left;
     position: fixed;
-    top: 0px;
-    right: 234.5px;
+    top: 22px;
+    right: 232.5px;
     z-index: 5;
-    margin-left: 30px;
+    margin: 0px auto;
+    font-family: 'Arial', 'Helvetuca Neue', Helvetica, sans-serif;
+    color: #666666;
+    font-size: 16px;
 }
 
 #headLtSide #headMid #headRtSide {
-    margin: 0 auto;
+    margin: 0px auto;
     text-align: center;
     margin-top: 10px;
 }
@@ -60,17 +59,20 @@ h2 {
     height: 45px;
     width: 200px;
     position: fixed;
-    margin: 0px 30px 0px 0px;
+    margin: 0px auto;
     top: 0px;
     left: 232.5px;
-    float:left;
+    /* float:left; */ */
     z-index: 4;
 }
+
+/* Body Section */
 .wrapper {
     height: calc(100vh - 71px);
     overflow: auto;
     clear: both;
 }
+
 .page {
     width: 956px;
     background: #ffffff;
@@ -79,7 +81,17 @@ h2 {
     position: relative;
     top: 100px;
     left: 232.5;
-    
+}
+
+.content {
+    width: 920px;
+    margin: 0 auto;
+    line-height: 2;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
 h3 {
@@ -90,19 +102,11 @@ h3 {
     margin: 0 auto;
 }
 
-p {
+/* Applicable to index.html */
+.about {
     font-family: 'Arial', 'Helvetuca Neue', Helvetica, sans-serif;
     color: #666666;
-}
-.content {
-    width: 920px;
-    margin: 0 auto;
-    line-height: 2;
-    font-size: 16px;
-    padding: 20px;
-    position: relative;
-    top: 0px;
-    left: 0px;
+    font-size: 18px;
 }
 
 .photo {
@@ -110,6 +114,8 @@ p {
     float: left;
     padding: 15px 15px 5px 0px;
 }
+
+/* Footer */
 footer {
     width: 100%;
     border-top: 8px solid #4aaaa5;
@@ -120,10 +126,10 @@ footer {
     padding-top: 50px;
     position: sticky;
     bottom: 0px;
-    min-height: calc(100vh - 889px);
-    
+    /* min-height: calc(100vh - 889px); */
 }
 
+/* Link states */
 a:link {
     color: #666666;
     text-decoration: none;
@@ -144,6 +150,7 @@ a:active {
     text-decoration: none;
   }
 
+  /* Applicable to contact.html */
 input {
     width: 100%;
     height: 25px;
@@ -168,6 +175,7 @@ form {
     height: 30px;
 }
 
+/* Applicable to portfolio.html */
 .portContainer {
     position: relative;
     display: inline-block;
