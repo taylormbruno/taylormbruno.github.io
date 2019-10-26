@@ -1,0 +1,149 @@
+/* Background image */
+body {
+    background: url("../images/greek-vase.png");
+    background-repeat: repeat;
+    width: 100%;
+    max-height: 100%;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    color: #6C757D;
+}
+h1, h3 {
+    font-family: 'Noto Serif', serif;
+}
+.pageWrap {
+    max-height: 100%;
+}
+
+
+/* NavBar */
+.navName h1 {
+    margin-left: 10vw;
+    color:#17A2B8;
+    padding: 0px;
+}
+
+.navBarColor {
+    background: #FFFFFF;
+}
+
+
+/* Content */
+.pageContent {
+    min-height: calc(100vh - 120px);
+    position: relative;
+    top: 90px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+}
+.borderBox {
+    max-width: 70vw;
+    width: auto;
+    position: absolute;
+    left: 10%;
+    padding: 10px;
+    max-height: 70vh;
+    overflow: auto;
+    margin-bottom: 100px;
+}
+input {
+    width: 55vw;
+    color: #6C757D;
+}
+
+.message {
+    height: 20vh;
+
+}
+.submit {
+    background: #17A2B8;
+    padding: 5px 10px;
+    width: 100px;
+    color: white;
+}
+.portImg {
+    width: auto;
+    position: static;
+    z-index: 1;
+    margin: 1em 2em 0 2em;
+}
+h6 {
+    background: #4aaaa5;
+    color: #ffffff;
+    width: auto;
+    padding: 5px;
+    margin: 0 2em 0 2em;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    bottom: 50px;
+    font-size: 14px;
+}
+.portSpace {
+    width:auto
+}
+.portSpace img {
+    opacity: 0;
+}
+
+
+/* Footer */
+.push {
+    height: 100px;
+    width: 100%;
+}
+.stickyFooter {
+    height: 100px; 
+}
+
+
+@media screen and (max-width: 768px){
+    .pageContent {
+        top: 90px;
+        left: 0px;
+        min-width: 100vw;
+        padding: 0px;
+    }
+    .borderBox {
+        min-width: 90vw;
+        width: auto;
+        margin: 0 auto;
+        position: static;
+    }
+    .navName h1 {
+        margin-left: 10vw;
+        color:#17A2B8;
+    }
+    .navBarColor {
+        background: #FFFFFF;
+    }
+    input {
+        width: 85vw;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    body .navName {
+        background:#17A2B8;
+        color:#FFFFFF;
+    }
+    .navBarColor {
+        background: #17A2B8;
+    }
+    .navName h1 {
+        color: #eeeeee;
+        text-align: center;
+    }
+    .borderBox {
+        max-height: 65vh;
+    }
+    .portImg {
+       width: auto;
+    }
+    .portSpace {
+        display: none;
+    }
+
+}
