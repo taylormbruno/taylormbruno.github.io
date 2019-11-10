@@ -1,0 +1,55 @@
+
+body {
+    background-color: #eeeeee;
+    font-family: 'Muli', sans-serif;
+}
+.header {
+    width: 100%;
+    padding: 10px 0px;
+}
+#highscores {
+    color:#593093;
+    float: left;
+    padding-left: 20px;
+}
+#time {
+    color: #593093;
+    text-align: right;
+    padding-right: 20px;
+}
+#landingPage {
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    display: block;
+}
+h1 {
+    font-weight: 800;
+    font-size: 24px;
+    margin: 20px 0px 10px 0px;
+}
+img {
+    width: 32%;
+    margin: auto;
+    padding-top: 10px;
+}
+#questPage {
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+    display: none;
+
+}
+button {
+    color: white;
+    background-color: #593093;
+    margin: 10px 0px;
+    padding: 3px 5px;
+    border-radius: 15%;
+    font-size: 16px;
+    width: auto;
+    height: auto;
+}
+h2 {
+    margin: 20px 0px 10px 0px;
+}
