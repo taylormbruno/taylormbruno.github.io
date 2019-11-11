@@ -70,23 +70,29 @@ input {
     font-size: 16px;
 }
 #htmlScores {
-    width: 32%;
-    border: 2px solid black;
+    width: 31%;
+    background: #F26526;
+    color: white;
     float: left;
     margin: 10px 5px;
     padding-top: 10px;
 }
 #cssScores {
-    width: 32%;
-    border: 2px solid black;
+    width: 31%;
+    background: #23ABE2;
+    color: white;
     float: left;
     margin: 10px 5px;
     padding-top: 10px;
 }
 #jsScores {
-    width: 32%;
-    border: 2px solid black;
+    width: 31%;
+    background: #F7DF1B;
+    color: white;
     float: left;
     margin: 10px 5px;
     padding: 10px;
+}
+caption {
+    color: black;
 }

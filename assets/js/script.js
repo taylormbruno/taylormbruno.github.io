@@ -12,6 +12,7 @@ var quesCounter = 0;
 
 var timeEl = document.getElementById("time");
 var timer = 75;
+var end = false;
 
 var isHtmlTrue = false;
 var isCssTrue = false;
@@ -20,10 +21,13 @@ var isJsTrue = false;
 // time interval for all quizes
 $('#quizOptions').click( function(){
     timer = 75;
-    setInterval(function() {
+    var timerInterval = setInterval(function() {
       timer--;
        if (timer >= 0) {
           timeEl.textContent = "Time: " + timer;
+       }
+       if (end === true) {
+        clearInterval(timerInterval);
        }
       }, 1000);
  });
@@ -46,8 +50,8 @@ function htmlQuiz() {
         }
     }  
     else if ((quesCounter >= htmlLastQues) || (timer === 0)) {
+        end = true;        
         isHtmlTrue = true;
-        clearInterval(timer);
         getInitials();
         
     }
@@ -72,8 +76,6 @@ function htmlAnswer() {
     }
 }
 
-
-
 // CSS Quiz functions
 var cssLastQues = cssQuestions.length;
 var cssCurrentQ = cssQuestions[quesCounter];
@@ -92,8 +94,8 @@ function cssQuiz() {
         }
     } 
     else if ((quesCounter >= cssLastQues) || (timer === 0)) {
+        end = true;
         isCssTrue = true;
-        clearInterval(timer);
         getInitials();
     }
 }
@@ -135,8 +137,8 @@ function jsQuiz() {
         }
     } 
     else if ((quesCounter >= jsLastQues) || (timer === 0)) {
+        end = true;
         isJsTrue = true;
-        clearInterval(timer);
         getInitials();
     }
 }
@@ -162,18 +164,12 @@ function jsAnswer() {
 
 
 //Functions for Initials and Highscores
-var userHTML = [{ 
-    userIn: initInput.nodeValue.trim(), 
-    userSc: scoreNum, 
-}];
-var userCSS = [{ 
-    userIn: initInput.nodeValue.trim(), 
-    userSc: scoreNum, 
-}];
-var userJS = [{ 
-    userIn: initInput.nodeValue.trim(), 
-    userSc: scoreNum,
-}];
+var userHTML = { 
+};
+var userCSS = { 
+};
+var userJS = { 
+};
 
 var initInput = document.getElementById("initials");
 
@@ -194,19 +190,36 @@ function getInitials() {
     if (isHtmlTrue) {
         $("#submit").on("click", function(event){
             event.preventDefault(); 
-            localStorage.setItem("userHTML", JSON.stringify(userHTML));
-            console.log(userHTML);
+            $('input[type="text"]').each(function(){
+                var htmlID = $(this).attr('id');
+                var hIdVal = $(this).val();
+                localStorage.setItem(htmlID, hIdVal);
+                console.log(hIdVal);
+            });
+            var htmlSc = scoreNum.attr('score');
+            var hScVal = scoreNum.val();
+            localStorage.setItem(htmlSc, hScVal);
+            console.log(hScVal);
+
             highscorePage();
         });
     }
     else if (isCssTrue) {
-        localStorage.setItem("initials", JSON.stringify(userInfoCSS));
-        localStorage.setItem("score", JSON.stringify(userInfoCSS));
+        event.preventDefault(); 
+        $('input[type="text"]').each(function(){
+            var cssID = $(this).attr('id');
+            var cIdVal = $(this).val();
+            localStorage.setItem(cssID, cIdVal);   
+        });  
         highscorePage();
     }
     else if (isJsTrue) {
-        localStorage.setItem("initials", JSON.stringify(userInfoJS));
-        localStorage.setItem("score", JSON.stringify(userInfoJS));
+        event.preventDefault(); 
+        $('input[type="text"]').each(function(){
+            var jsID = $(this).attr('id');
+            var jIdVal = $(this).val();
+            localStorage.setItem(jsID, jIdVal);   
+        });
         highscorePage();
     }
 }
@@ -217,13 +230,10 @@ function highscorePage() {
     scorePage.setAttribute("style", "display:block;");
     questPage.setAttribute("style", "display:none;");
     if (isHtmlTrue) {
-        $("#htmlScores").append('<tr><td>' + userHTML.userIn + '</td><td>' + userHTML.userSc + '</td></tr>');
     }
     else if (isCssTrue) {
-        
     }
     else if (isJsTrue) {
-    
     }
 
 }
