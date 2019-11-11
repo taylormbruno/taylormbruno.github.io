@@ -16,14 +16,35 @@
         <div id="landingPage">
             <h1 id="line1">Coding Quiz Challenge</h1>
             <p>Try to answer the following code-related questions within the time limit. Click the image below for the desired quiz. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-            <img src="assets/images/HTMLimg.png" alt="HTML Logo" id="htmlQues" onclick="htmlQuiz()">
-            <img src="assets/images/CSSimg.png" alt="CSS Logo" id="cssQues" onclick="cssQuiz()">
-            <img src="assets/images/JSimg.png" alt="JS Logo" id="jsQues" onclick="jsQuiz()">
+            <div id="quizOptions">
+                <img src="assets/images/HTMLimg.png" alt="HTML Logo" id="htmlQues" onclick="htmlQuiz()">
+                <img src="assets/images/CSSimg.png" alt="CSS Logo" id="cssQues" onclick="cssQuiz()">
+                <img src="assets/images/JSimg.png" alt="JS Logo" id="jsQues" onclick="jsQuiz()">
+            </div>
         </div>
         <div id="questPage">
         </div>
         <div id="enterInitial"></div>
-        <div id="scorePage"></div>
+        <div id="scorePage">
+            <table id="htmlScores">
+                <tr>
+                    <th>User</th>
+                    <th>Score</th>
+                </tr>
+            </table>
+            <table id="cssScores">
+                <tr>
+                    <th>User</th>
+                    <th>Score</th>
+                </tr>
+            </table>
+            <table id="jsScores">
+                <tr>
+                    <th>User</th>
+                    <th>Score</th>
+                </tr>
+            </table>
+        </div>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="assets/js/questions.js"></script>
         <script src="assets/js/script.js"></script>

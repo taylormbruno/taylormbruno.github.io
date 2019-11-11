@@ -14,7 +14,7 @@ var htmlQuestions = [
     {
         title: "What tag is used to define a standard cell inside a table?",
         choices: ["&lt;td&gt;", "&lt;h1&gt; to &lt;h6&gt;", "&lt;footer&gt;", "&lt;button&gt;"],
-        answer: "1"
+        answer: "0"
     },
     {
         title: "What tag is used to render or transform text into an emphasized (italics) version?",
