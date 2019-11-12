@@ -101,10 +101,10 @@ caption {
     color: black;
 }
 footer {
-    position: fixed;
-    bottom: 0;
+    position: fixed !important;
+    bottom: 0 !important;
     color: #555555;
     margin: 0 auto;
     width: 100%;
-    text-align: center;
+    text-align: center !important;
 }
