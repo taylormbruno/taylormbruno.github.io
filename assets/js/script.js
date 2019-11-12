@@ -7,7 +7,6 @@ var questPage = document.getElementById("questPage");
 var scorePage = document.getElementById("scorePage");
 var scoreNum = 0;
 
-
 var quesCounter = 0;
 
 var timeEl = document.getElementById("time");
@@ -56,7 +55,6 @@ function htmlQuiz() {
         
     }
 }
-
 function htmlAnswer() {
     console.log($(this.event.target).attr('data-attribute'));
     console.log(htmlCurrentQ.answer);
@@ -99,7 +97,6 @@ function cssQuiz() {
         getInitials();
     }
 }
-
 function cssAnswer() {
     console.log($(this.event.target).attr('data-attribute'));
     console.log(cssCurrentQ.answer)
@@ -142,7 +139,6 @@ function jsQuiz() {
         getInitials();
     }
 }
-
 function jsAnswer() {
     console.log($(this.event.target).attr('data-attribute'));
     console.log(jsCurrentQ.answer)
@@ -164,63 +160,92 @@ function jsAnswer() {
 
 
 //Functions for Initials and Highscores
-var userHTML = { 
-};
-var userCSS = { 
-};
-var userJS = { 
-};
+var userHTMLinit = [];
+var userHTMLscore = [];
+var userCSSinit = [];
+var userCSSscore = [];
+var userJSinit = [];
+var userJSscore = [];
 
-var initInput = document.getElementById("initials");
-
-function getInitials() {
+function getInitials() { // used in all functions
     scoreNum = timer;
     landingPage.setAttribute("style", "display:none;");
     initialPage.setAttribute("style", "display:block;");
     scorePage.setAttribute("style", "display:none;");
     questPage.setAttribute("style", "display:none;");
-    $('#enterInitial').append("<h1>All done!</h1>");
-    $('#enterInitial').append("<h3>Your score is: " + scoreNum + ".</h4>");
-    $('#enterInitial').append('<input type="text" name="Initials" id="initials" placeholder="Enter initials here"><button id="submit">Submit</button>');
+    $('#enterInitial').empty();
+    $('#enterInitial').append("<h1>All done!</h1>");    
+    $('#enterInitial').append("<h3>Your score is: " + scoreNum + ".</h3>");
+    $('#enterInitial').append('<form id="initForm"><input type="text" name="Initials" id="initials" placeholder="Enter initials here"><button id="submit">Submit</button></form>');
 
-    console.log("HTML is: " + isHtmlTrue);
-    console.log("CSS is: " + isCssTrue);
-    console.log("JS is: " + isJsTrue);
-    
-    if (isHtmlTrue) {
-        $("#submit").on("click", function(event){
+    var initInput = document.getElementById("initials");
+    var initForm = document.getElementById("initForm");
+
+    if (isHtmlTrue === true) {
+        localStorage.setItem("hUser", JSON.stringify(userHTMLinit));
+        localStorage.setItem("hScore", JSON.stringify(userHTMLscore));
+        initForm.addEventListener("submit", function(event){
             event.preventDefault(); 
-            $('input[type="text"]').each(function(){
-                var htmlID = $(this).attr('id');
-                var hIdVal = $(this).val();
-                localStorage.setItem(htmlID, hIdVal);
-                console.log(hIdVal);
-            });
-            var htmlSc = scoreNum.attr('score');
-            var hScVal = scoreNum.val();
-            localStorage.setItem(htmlSc, hScVal);
-            console.log(hScVal);
+            var htInit = initInput.value.trim();
+            if (htInit === ""){
+                return;
+            }
+            var htScore = scoreNum;
 
+            userHTMLinit.push(htInit);
+            userHTMLscore.push(htScore);
+
+            localStorage.setItem("hUser", JSON.stringify(userHTMLinit));
+            localStorage.setItem("hScore", JSON.stringify(userHTMLscore));
+
+            console.log("Initials are: " + htInit);
+            console.log("Score is: " + htScore);
             highscorePage();
         });
     }
-    else if (isCssTrue) {
-        event.preventDefault(); 
-        $('input[type="text"]').each(function(){
-            var cssID = $(this).attr('id');
-            var cIdVal = $(this).val();
-            localStorage.setItem(cssID, cIdVal);   
-        });  
-        highscorePage();
-    }
-    else if (isJsTrue) {
-        event.preventDefault(); 
-        $('input[type="text"]').each(function(){
-            var jsID = $(this).attr('id');
-            var jIdVal = $(this).val();
-            localStorage.setItem(jsID, jIdVal);   
+    else if (isCssTrue === true) {
+        localStorage.setItem("cUser", JSON.stringify(userHTMLinit));
+        localStorage.setItem("cScore", JSON.stringify(userHTMLscore));
+        initForm.addEventListener("submit", function(event){
+            event.preventDefault(); 
+            var csInit = initInput.value.trim();
+            if (csInit === ""){
+                return;
+            }
+            var csScore = scoreNum;
+
+            userCSSinit.push(csInit);
+            userCSSscore.push(csScore);
+
+            localStorage.setItem("cUser", JSON.stringify(userCSSinit));
+            localStorage.setItem("cScore", JSON.stringify(userCSSscore));
+
+            console.log("Initials are: " + csInit);
+            console.log("Score is: " + csScore);
+            highscorePage();
         });
-        highscorePage();
+    }
+    else if (isJsTrue === true) {
+        localStorage.setItem("jUser", JSON.stringify(userJSinit));
+        localStorage.setItem("jScore", JSON.stringify(userJSscore));
+        initForm.addEventListener("submit", function(event){
+            event.preventDefault(); 
+            var jsInit = initInput.value.trim();
+            if (jsInit === ""){
+                return;
+            }
+            var jsScore = scoreNum;
+
+            userJSinit.push(jsInit);
+            userJSscore.push(jsScore);
+
+            localStorage.setItem("jUser", JSON.stringify(userJSinit));
+            localStorage.setItem("jScore", JSON.stringify(userJSscore));
+
+            console.log("Initials are: " + userJSinit);
+            console.log("Score is: " + userJSscore);
+            highscorePage();
+        });
     }
 }
 
@@ -229,11 +254,94 @@ function highscorePage() {
     initialPage.setAttribute("style", "display:none;");
     scorePage.setAttribute("style", "display:block;");
     questPage.setAttribute("style", "display:none;");
-    if (isHtmlTrue) {
+    if (isHtmlTrue === true) {
+        var storedUserH = JSON.parse(localStorage.getItem("hUser"));
+        var storedScoreH = JSON.parse(localStorage.getItem("hScore"));
+        if ((storedUserH !== null) || (storedScoreH !== null)) {
+            userHTMLinit = storedUserH;
+            userHTMLscore = storedScoreH;
+        }
+        for (var i=0; i < userHTMLinit.length; i++) {
+            storedUserH = JSON.parse(localStorage.getItem("hUser"));
+            storedScoreH = JSON.parse(localStorage.getItem("hScore"));
+            $("#htmlScores").append("<tr><td>" + userHTMLinit[i] + "</td><td>" + userHTMLscore[i] + "</td></tr>");
+        }
     }
-    else if (isCssTrue) {
+    else if (isCssTrue === true) {
+        var storedUserC = JSON.parse(localStorage.getItem("cUser"));
+        var storedScoreC = JSON.parse(localStorage.getItem("cScore"));
+        if ((storedUserC !== null) || (storedScoreC !== null)) {
+            userCSSinit = storedUserC;
+            userCSSscore = storedScoreC;
+        }
+        for (var k=0; k < userCSSinit.length; k++) {
+            storedUserC = JSON.parse(localStorage.getItem("cUser"));
+            storedScoreC = JSON.parse(localStorage.getItem("cScore"));
+            $("#cssScores").append("<tr><td>" + userCSSinit[k] + "</td><td>" + userCSSscore[k] + "</td></tr>");
+        }
     }
-    else if (isJsTrue) {
+    else if (isJsTrue === true) {
+        var storedUserJ = JSON.parse(localStorage.getItem("jUser"));
+        var storedScoreJ = JSON.parse(localStorage.getItem("jScore"));
+        if ((storedUserJ !== null) || (storedScoreJ !== null)) {
+            userJSinit = storedUserJ;
+            userJSscore = storedScoreJ;
+        }
+        for (var m=0; m < userJSinit.length; m++) {
+            storedUserJ = JSON.parse(localStorage.getItem("jUser"));
+            storedScoreJ = JSON.parse(localStorage.getItem("jScore"));
+            $("#jsScores").append("<tr><td>" + userJSinit[m] + "</td><td>" + userJSscore[m] + "</td></tr>");
+        }
     }
+}
 
+$("#highscores").on("click", function() {
+    // html quiz scores
+    var storedUserH = JSON.parse(localStorage.getItem("hUser"));
+    var storedScoreH = JSON.parse(localStorage.getItem("hScore"));
+    if ((storedUserH !== null) || (storedScoreH !== null)) {
+        userHTMLinit = storedUserH;
+        userHTMLscore = storedScoreH;
+    }
+    for (var i=0; i < userHTMLinit.length; i++) {
+        storedUserH = JSON.parse(localStorage.getItem("hUser"));
+        storedScoreH = JSON.parse(localStorage.getItem("hScore"));
+        $("#htmlScores").append("<tr><td>" + userHTMLinit[i] + "</td><td>" + userHTMLscore[i] + "</td></tr>");
+    }
+    // css quiz scores
+    var storedUserC = JSON.parse(localStorage.getItem("cUser"));
+    var storedScoreC = JSON.parse(localStorage.getItem("cScore"));
+    if ((storedUserC !== null) || (storedScoreC !== null)) {
+        userCSSinit = storedUserC;
+        userCSSscore = storedScoreC;
+    }
+    for (var k=0; k < userCSSinit.length; k++) {
+        storedUserC = JSON.parse(localStorage.getItem("cUser"));
+        storedScoreC = JSON.parse(localStorage.getItem("cScore"));
+        $("#cssScores").append("<tr><td>" + userCSSinit[k] + "</td><td>" + userCSSscore[k] + "</td></tr>");
+    }
+    // js quiz scores
+    var storedUserJ = JSON.parse(localStorage.getItem("jUser"));
+    var storedScoreJ = JSON.parse(localStorage.getItem("jScore"));
+    if ((storedUserJ !== null) || (storedScoreJ !== null)) {
+        userJSinit = storedUserJ;
+        userJSscore = storedScoreJ;
+    }
+    for (var m=0; m < userJSinit.length; m++) {
+        storedUserJ = JSON.parse(localStorage.getItem("jUser"));
+        storedScoreJ = JSON.parse(localStorage.getItem("jScore"));
+        $("#jsScores").append("<tr><td>" + userJSinit[m] + "</td><td>" + userJSscore[m] + "</td></tr>");
+    }
+})
+
+// landing page reset click
+function goHome() {
+    landingPage.setAttribute("style", "display:block;");
+    initialPage.setAttribute("style", "display:none;");
+    scorePage.setAttribute("style", "display:none;");
+    questPage.setAttribute("style", "display:none;");
+    isHtmlTrue = false;
+    isCssTrue = false;
+    isJsTrue = false;
+    quesCounter = 0;
 }

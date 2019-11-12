@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="header">
-            <h5 id="highscores" onclick="getScores()">View Highscores</h5>
+            <h5 id="highscores" onclick="highscorePage()">View Highscores</h5>
             <h5 id="time">Time: 75</h5>
         </div>
         <div id="landingPage">
@@ -24,7 +24,8 @@
         </div>
         <div id="questPage">
         </div>
-        <div id="enterInitial"></div>
+        <div id="enterInitial">
+        </div>
         <div id="scorePage">
             <table id="htmlScores">
                 <caption>HTML Quiz Scores</caption>
@@ -48,6 +49,7 @@
                 </tr>
             </table>
         </div>
+        <footer onclick="goHome()"><h6>Return to landing page</h6></footer>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="assets/js/questions.js"></script>
         <script src="assets/js/script.js"></script>
