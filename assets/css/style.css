@@ -63,21 +63,23 @@ input {
     color: white;
 }
 .portImg {
-    width: auto;
+    width: 25vw;
     position: static;
     z-index: 1;
     margin: 1em 2em 0 2em;
+    border: 3px rgb(183, 192, 199) ridge;
 }
 h6 {
     background: #4aaaa5;
     color: #ffffff;
-    width: auto;
+    width: 25vw;
     padding: 5px;
     margin: 0 2em 0 2em;
     position: relative;
     z-index: 2;
     text-align: center;
-    bottom: 50px;
+    bottom: 75px;
+    left: 4px;
     font-size: 14px;
 }
 .portSpace {
