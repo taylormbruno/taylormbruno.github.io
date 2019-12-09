@@ -1,62 +1,122 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Taylor Bruno</title>
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Lato|Noto+Serif&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/style.css">
-        
-    </head>
-
-    <body>
-      <div class="pageWrap">
-        <!-- NavBar -->
-        <nav class="navbar navbar-expand-md navbar-light border-bottom border- fixed-top navBarColor">
-          <span class="navbar-brand my-auto navName">
-            <h1>Taylor Bruno</h1>
-          </span>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Taylor Bruno</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="assets/FontAwesome/css/all.css">
+  <link href="assets/jquery-ui-1.12.1.custom/jquery-ui.css">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light justify-content-end">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#aboutMe">About</a>
+      <a class="navbar-brand" href="#portfolio">Portfolio</a>
+      <a class="navbar-brand" href="#contact">Contact</a>
+    </div>
+  </nav>
+  <!-- About Me -->
+  <div id="aboutMe">
+    <div id="headerEl">
+      <h1 id="nameHead">Hello, I'm Taylor Bruno.</h1>
+      <img src="assets/images/hw-photo.jpg" id="aboutImg">
+      <h3 id="bio">I am a prospective full-stack web developer currently enrolled in the UNC-Charlotte Coding Bootcamp.</h3>
+    </div>
+    <div class="row" id="skillSet">
+      <div class="col-5 skillList">
+        <h5 class="skillHead">During this program, I have already began to develop skills using:</h5> 
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>jQuery</li>
+          <li>Web API's</li>
+        </ul>
+      </div>
+      <div class="col-5 skillList">
+          <h5 class="skillHead">By the end of the program, I will have also gained experience with:</h5> 
+          <ul>
+            <li>Node.js</li>
+            <li>React.js</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <!-- Portfolio -->
+  <div id="portfolio">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam dolores soluta ipsum quas. A dolorem, magnam quam doloribus delectus nihil reprehenderit non. Culpa laudantium dignissimos, nam vitae distinctio vel assumenda.
+    <br>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas similique iure eaque suscipit excepturi? Ullam, praesentium aperiam! Quo error natus deleniti, pariatur mollitia provident! Quos quis aperiam explicabo totam vero!
+    <br>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita vitae aliquam eveniet eum nam doloremque repellat esse blanditiis, quia reiciendis quo odit sunt eaque aperiam repellendus, laborum ab debitis ad.
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quam alias eaque veniam autem, sed dolor quod voluptates atque harum placeat facere ducimus, quasi maiores. Reiciendis nemo culpa minus atque!
+  </div>
+  <!-- Contact -->
+  <div id="contact">
+    <h2>Get in touch</h2>
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form action="https://formspree.io/mbjlqyrw" method="POST">
+      <label>Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name"></label>
+      <br>
+      <label>Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="_replyto"></label>
+      <br>
+      <label>Message: <textarea name="message"></textarea></label>
+      <br>
+      <!-- your other form fields go here -->
+      <button type="submit">Send</button>
+    </form>
+    <div class="row" id="iconBar">
+      <div class="contactBtn">
+        <i class="far fa-file"></i>
+        <h5 id="resumeTrigger" data-toggle="modal" data-target="#resumeModal">Resume</h5>
+      </div>
+      <div class="contactBtn">
+        <i class="fab fa-github"></i>
+        <h5>Github</h5>
+      </div>
+      <div class="contactBtn">
+        <i class="fab fa-linkedin"></i>
+        <h5>LinkedIn</h5>
+      </div>
+    </div>
+  </div>
+  <div class="modal" tabindex="-1" role="dialog" id="resumeModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Resume</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
           </button>
-          <div class="collapse navbar-collapse navCollapseT" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link text-black-50" href="index.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-black-50" href="portfolio.html">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-black-50" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <!-- Body Section -->
-        <div class="pageContent mt-4 position-relative">
-          <div class="container bg-white border border- borderBox">
-            <h3 class="border-bottom border-secondary m-2 text-info">About Me</h3>
-            <img src="assets/images/hw-photo.jpg" alt="me" class="photo float-left m-2" width="150px">
-            <p class="about m-2">I am currently enrolled in the UNC-Charlotte Coding Bootcamp. During this program, I look forward to developing my skills, building my portfolio, and learning the languages needed to succeed. I have spent the last four years as a Restaurant General Manager and realized that a life in the service industry was not my goal. After seeing the variety of opportunities that the tech industry offers, I became excited to get started as soon as possible. <br><br>
-            I grew up in Hickory, NC and attended St. Stephens High School, where I was captain of the color guard team and had first introduced myself to HTML. When the service industry had bored me, I remembered how much I enjoyed personalizing a Myspace page and how dedicated that made me to learning to do it without having to copy and paste. This led me to spend the majority of a five hour drive in a deep Google dive, searching for any and all related information. I was sold on the way technology is always growing and changing as I enjoy a challenging enviroment that will allow me to continuously grow.
-            </p>
-          </div>
+        </div>
+        <div class="modal-body">
+          <iframe id="resumeEl" src="assets/resume.pdf"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-    <!-- Footer -->
-    <footer class="footer py-4 bg-secondary text-white border-top border-info stickyFooter">
-      <div class="container text-center">
-        <small>Copyright &copy;</small>
-      </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="assets/FontAwesome/js/all.js"></script>
+  <script src="assets/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
 </html>
