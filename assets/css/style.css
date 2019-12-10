@@ -3,7 +3,7 @@
     margin-bottom: 100px;
 }
 body {
-    
+    font-family: 'Comfortaa', cursive;
     width: 100%;
 }
 #aboutMe {
@@ -22,11 +22,18 @@ body {
 }
 #nameHead {
     text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 64px;
 }
 #aboutImg {
-    width:150px;
+    width: 250px;
     float: left;
     padding: 10px;
+    border-radius: 180px;
+}
+#bio {
+    padding-top: 50px;
+    text-align: center;
 }
 #skillSet {
     clear: both;
@@ -35,13 +42,24 @@ body {
 .skillList {
     background: #FFD7D4;
     margin: 0 auto;
-    padding: 5px;
+    padding: 10px;
     border-radius: 20px;
 
 }
-/* .skillHead {
-    
-} */
+#portfolio {
+    padding: 20px;
+    background-color: #F3EAEF;
+}
+#portHeader {
+    font-family: 'Amatic SC', cursive; 
+    text-align: center;
+    font-size: 48px;
+}
+#carouselExampleControls {
+    max-width: 500px;
+    margin: 0 auto;  
+    border: 3px solid #B3859A;
+}
 #contact {
     background: url("../images/bgImg.jpg");
     background-size: cover;
@@ -49,6 +67,10 @@ body {
     margin: 0 auto;
     padding: 15px;
     text-align: center; 
+}
+#contactHead{
+    font-family: 'Amatic SC', cursive;
+    font-size: 48px;
 }
 form {
     padding: 10px;
@@ -75,13 +97,17 @@ a {
     border-radius: 10px;
     margin: 0 auto;
     color:white;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
-    width: 90px;
+    width: 115px;
+}
+#resumeModal {
+    height: 100vh;
 }
 .modal-body {
     margin: 0 auto;
 }
 iframe {
+    /* width: 75vw; */
     height: 90vh;
 }
