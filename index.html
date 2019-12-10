@@ -83,26 +83,7 @@
       </a>
     </div>
     <div id="insertModal">
-      <div class="modal fade" id="simpleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Simple Eats</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <img src="simple.gif">
-              <p>This project was built collaboratively by three prospective coders at the UNCC Coding Bootcamp. This project allows a user to find recipes and filter results based on dietary restrictions, excluded ingredients, food intolerances, and types of food/drink. Users can add items from a recipe's ingredient list directly to a grocery list. </p>  
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="simpleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="portModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -111,7 +92,8 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body" id="modalBody0"></div>
+            <div class="modal-body" id="modalBody0"> 
+            </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -152,14 +134,14 @@
   
   <div class="modal" tabindex="-1" role="dialog" id="resumeModal">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content" id="resModContent">
         <div class="modal-header">
           <h5 class="modal-title">Resume</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" id="resModBody">
           <iframe id="resumeEl" src="assets/resume.pdf"></iframe>
         </div>
         <div class="modal-footer">

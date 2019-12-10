@@ -102,12 +102,17 @@ a {
     width: 115px;
 }
 #resumeModal {
-    height: 100vh;
+    margin: 0 auto !important;
 }
-.modal-body {
-    margin: 0 auto;
+.modal-dialog {
+    margin: 0 auto !important;
 }
-iframe {
-    /* width: 75vw; */
+
+#resModContent {
+    width: 90vw;
     height: 90vh;
+}
+iframe, #resModBody {
+    width: 100%;
+    height: 100%;
 }
