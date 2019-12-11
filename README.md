@@ -8,5 +8,5 @@
 ### Built With
 - HTML
 - CSS
-- JavaScript
+- JavaScript / [jQuery](https://jquery.com/)
 - [Bootstrap](https://getbootstrap.com/)
