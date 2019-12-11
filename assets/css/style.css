@@ -110,20 +110,13 @@ a, a:hover {
     text-decoration: none;
     color:white;
 }
-#resumeModal {
+#resModBody {
     margin: 0 auto !important;
-}
-.modal-dialog {
-    margin: 0 auto !important;
-}
-
-#resModContent {
-    width: 90vw;
-    height: 90vh;
-}
-iframe, #resModBody {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+} 
+#resumeEl {
+    width: 100% !important;
+    height: 65vh;;
 }
 .contactBtn {
     background-color: #363486;
@@ -135,3 +128,16 @@ iframe, #resModBody {
     width: 115px;
 }
 
+@media only screen and (max-width: 640px) {
+    #aboutImg {
+        float: none;
+        clear: both;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        left: 25%;
+    }
+    #bio {
+        clear: both;
+    }
+}
