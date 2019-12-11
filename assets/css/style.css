@@ -55,10 +55,28 @@ body {
     text-align: center;
     font-size: 48px;
 }
-#carouselExampleControls {
-    max-width: 500px;
-    margin: 0 auto;  
-    border: 3px solid #B3859A;
+#portImgEl {
+    margin: 0 auto;
+    text-align: center;
+}
+.portImg {
+    height: 25vh;
+    margin: 0 auto;
+    border: 2px solid #B3859A;
+    margin: 10px;
+    padding: 5px;
+}
+.portImg:hover {
+    height: 30vh;
+}
+.modalImg {
+    width: 100%;
+}
+.portLink {
+    color: #A2768F;
+}
+.portLink:hover {
+    color: rgb(87, 63, 77);
 }
 #contact {
     background: url("../images/bgImg.jpg");
@@ -88,18 +106,9 @@ input{
 textarea {
     width: 40vw;
 }
-a {
+a, a:hover {
     text-decoration: none;
     color:white;
-}
-.contactBtn {
-    background-color: #363486;
-    border-radius: 10px;
-    margin: 0 auto;
-    color:white;
-    padding: 15px;
-    text-align: center;
-    width: 115px;
 }
 #resumeModal {
     margin: 0 auto !important;
@@ -116,3 +125,13 @@ iframe, #resModBody {
     width: 100%;
     height: 100%;
 }
+.contactBtn {
+    background-color: #363486;
+    border-radius: 10px;
+    margin: 0 auto;
+    color:white;
+    padding: 15px;
+    text-align: center;
+    width: 115px;
+}
+
