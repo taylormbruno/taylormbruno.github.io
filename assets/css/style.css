@@ -10,8 +10,8 @@ body {
     width: 100%;
 }
 #aboutMe {
-    background: url("../images/bgImg2.jpg");
-    background-size: cover;
+    background: url("../images/confectionary.png");
+    /* background-size: cover; */
     background-repeat: repeat;
     padding-top: 100px;
     padding-bottom: 25px;
@@ -31,8 +31,10 @@ body {
 #aboutImg {
     width: 250px;
     float: left;
-    padding: 10px;
+    padding: 2px;
     border-radius: 180px;
+    border: 5px double #B3859A;
+    margin: 10px;
 }
 #bio {
     padding-top: 50px;
@@ -43,7 +45,7 @@ body {
     margin: 0 auto;
 }
 .skillList {
-    background: #FFD7D4;
+    background: #cc97b2;
     margin: 0 auto;
     padding: 10px;
     border-radius: 20px;
@@ -67,10 +69,12 @@ body {
     margin: 0 auto;
     border: 2px solid #B3859A;
     margin: 10px;
-    padding: 5px;
+    padding: 1px;
 }
 .portImg:hover {
-    height: 30vh;
+    /* height: 30vh; */
+    /* opacity: 50%; */
+    filter: drop-shadow(8px 8px 10px darkgray);
 }
 .modalImg {
     width: 100%;
@@ -82,8 +86,8 @@ body {
     color: rgb(87, 63, 77);
 }
 #contact {
-    background: url("../images/bgImg.jpg");
-    background-size: cover;
+    background: url("../images/confectionary.png");
+    /* background-size: cover; */
     background-repeat: repeat;
     margin: 0 auto;
     padding: 15px;
@@ -131,7 +135,7 @@ a, a:hover {
     
 }
 .contactBtn:hover {
-    transform: scale(0.75);
+    transform: scale(0.9);
 }
 @media only screen and (max-width: 640px) {
     #aboutImg {

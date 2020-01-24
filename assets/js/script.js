@@ -2,6 +2,13 @@ $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
 });
 
+$("#burger").on("click", function(){
+    event.preventDefault();
+    $("#modalBody0").empty();
+    $("#exampleModalLabel").text("Eat-Da-Burger!");
+    $("#modalBody0").append("<img src='assets/images/burger.png' class='modalImg'><p>This project was built with Node.js, Express.js, a MySQL database, and Handlebars. This project allows a user enter the burgers they want to eat and then 'Devour' them at the click of a button. The application is deployed on Heroku with the user's 'burger' content saved in a database.</p><a href='https://github.com/taylormbruno/burger' class='portLink' target='_blank'>Click here to visit the repository.</a>");
+    $("#portModal").modal("show");
+});
 
 $("#simpleEats").on("click", function(){
     event.preventDefault();
