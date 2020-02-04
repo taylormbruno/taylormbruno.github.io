@@ -126,7 +126,7 @@ a, a:hover {
     height: 65vh;;
 }
 .contactBtn {
-    background-color: #363486;
+    background-color: gray;
     border-radius: 10px;
     margin: 0 auto;
     color:white;
