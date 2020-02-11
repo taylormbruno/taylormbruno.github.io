@@ -1,5 +1,6 @@
 .navbar {
-    background-color: #A2768F !important;
+    /* background-color: #A2768F !important; */
+    background-color: #4e596b !important;
     margin-bottom: 100px;
 }
 .navbar-brand:hover {
@@ -33,7 +34,7 @@ body {
     float: left;
     padding: 2px;
     border-radius: 180px;
-    border: 5px double #B3859A;
+    border: 5px double #574e6b;
     margin: 10px;
 }
 #bio {
@@ -45,15 +46,19 @@ body {
     margin: 0 auto;
 }
 .skillList {
-    background: #cc97b2;
+    /* background: #cc97b2; */
+    background: #574e6b;
     margin: 0 auto;
     padding: 10px;
+    padding-left: 20px;
     border-radius: 20px;
+    color: gainsboro;
+    overflow: auto;
 
 }
 #portfolio {
     padding: 20px;
-    background-color: #F3EAEF;
+    background-color: #dae0f0;
 }
 #portHeader {
     font-family: 'Amatic SC', cursive; 
@@ -67,7 +72,7 @@ body {
 .portImg {
     height: 25vh;
     margin: 0 auto;
-    border: 2px solid #B3859A;
+    border: 2px solid #574e6b;
     margin: 10px;
     padding: 1px;
 }
@@ -101,7 +106,8 @@ form {
     padding: 10px;
     font-weight: bold;
     font-size:24px;
-    background-color:#B3859A;
+    /* background-color:#B3859A */
+    background-color:#574e6b;
     margin: 0 auto;
     margin-bottom: 15px;
     border-radius: 10px;
