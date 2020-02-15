@@ -113,6 +113,9 @@ form {
     border-radius: 10px;
     width: 70vw;
 }
+label {
+    color: gainsboro;
+}
 input{
     width: 40vw;
 }
@@ -129,7 +132,7 @@ a, a:hover {
 } 
 #resumeEl {
     width: 100% !important;
-    height: 65vh;;
+    height: 65vh;
 }
 .contactBtn {
     background-color: gray;
