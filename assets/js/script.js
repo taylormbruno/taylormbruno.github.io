@@ -5,7 +5,7 @@ $('#myModal').on('shown.bs.modal', function () {
 $("#shelfie").on("click", function(){
     event.preventDefault();
     $("#modalBody0").empty();
-    $("#exampleModalLabel").text("Eat-Da-Burger!");
+    $("#exampleModalLabel").text("Sheflie");
     $("#modalBody0").append("<img src='assets/images/shelfie.png' class='modalImg'><p>This project was built with Node.js, Express.js, a MySQL database built with Sequelize, Passport.js for user login and authentication, and Handlebars. This project allows a user to sign up with the app and login using that username and password. Once logged in, the user is directed to their homepage and any saved books will populate in the correct 'book shelf' with the option to move or delete each book. When the user searches for a book, it will give them the option to save into their bookshelves.</p><a href='https://github.com/taylormbruno/project2' class='portLink' target='_blank'>Click here to visit the repository.</a><br><a href='https://aqueous-refuge-48419.herokuapp.com/' class='portLink' target='_blank'>Click here to visit the deployed application.</a>");
     $("#portModal").modal("show");
 });
